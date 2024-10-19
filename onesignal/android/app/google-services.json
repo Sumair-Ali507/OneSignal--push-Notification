@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "580841113743",
+    "project_id": "onesignal-push-notificat-fad54",
+    "storage_bucket": "onesignal-push-notificat-fad54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580841113743:android:7ab3c84fa57582067988fa",
+        "android_client_info": {
+          "package_name": "com.example.onesignal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQSWVSK4YG5awxEUBIIRRFU-HObAxo4Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

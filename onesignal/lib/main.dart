@@ -1,6 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async{
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
+
   runApp(const MyApp());
 }
 
@@ -8,6 +16,8 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,6 +65,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    super.initState();
+
+    OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
+    OneSignal.initialize("2350bccb-b22f-4339-b015-6bfa552ea019");
+    OneSignal.Notifications.requestPermission(true).then((value){
+      print('Signal Value : $value');
+
+    }
+    );
+  }
   int _counter = 0;
 
   void _incrementCounter() {
